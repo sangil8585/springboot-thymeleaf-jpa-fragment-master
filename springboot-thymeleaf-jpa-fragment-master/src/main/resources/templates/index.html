@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragment Project</title>
+    <th:block th:replace="/fragment/css"></th:block>
+</head>
+<body>
+    <main>
+        <!-- Heroes Table -->
+        <table>
+            <thead th:replace="/fragment/table :: tableHead"></thead>
+            <tbody th:replace="/fragment/table :: tableBody(pages = ${pages})"></tbody>
+        </table>
+
+        <!-- pagination -->
+        <ul th:replace="/fragment/pagination :: pagination(pages = ${pages}, start = ${start}, last = ${last})"></ul>
+
+        <!-- Create Modal -->
+        <th:block th:replace="/fragment/create"></th:block>
+
+        <!-- Update Modal -->
+        <th:block th:replace="/fragment/update"></th:block>
+    </main>
+
+    <footer th:replace="/fragment/footer"></footer>
+    <th:block th:replace="/fragment/js"></th:block>
+</body>
+</html>

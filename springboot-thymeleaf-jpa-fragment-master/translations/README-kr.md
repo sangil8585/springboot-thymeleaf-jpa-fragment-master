@@ -2,7 +2,6 @@
 <summary>번역:</summary>
   
 * [English](/README.md)  
-* [日本語](/translations/README-jp.md)
 
 </details>
   
